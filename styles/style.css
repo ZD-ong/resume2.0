@@ -1,0 +1,309 @@
+/* common style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #27292E;
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+ul,
+ol {
+    list-style: none;
+}
+section {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+section .content {
+    max-width: 940px;
+    margin-top: 60px;
+}
+section > h2 {
+    text-align: center;
+    color: #7C7D82;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+
+/* header style */
+header {
+    padding: 20px 0 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.header-inner {
+    padding: 0 16px 0 16px;
+}
+.header-inner >.logo > a {
+    font-family: 'Fredoka One', cursive;
+    color: #9A9DA2;
+    font-size: 30px;
+    display: block;
+    float: left;
+}
+.header-inner >.logo > a > span {
+    color: #E0656A;
+}
+.header-inner > nav {
+    padding: 0 16px;
+}
+.header-inner > nav > ul {
+    float: right;
+}
+.header-inner > nav > ul > li {
+    float: left;
+    margin-left: 18px;
+    margin-right: 18px;
+}
+.header-inner > nav > ul > li > a {
+    font-size: 14px;
+    color: #C0C2C5;
+    font-family: 'Open Sans', sans-serif;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    padding-top: 10px;
+    padding-bottom: 3px;
+    display: block;
+}
+header > .header-inner > nav > ul > li > a:hover {
+    border-bottom: 3px solid #DE6669;
+    transition: 0.3s;
+}
+header .more {
+    float: right;
+    color: #FFFFFF;
+    padding-top: 5px;
+}
+
+header .more i {
+    font-size: 27px;
+    border: 1px solid #888888;
+    padding: 3px;
+}
+header .more i:hover{
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* banner style */
+.banner {
+    height: 515px;
+    background-image: url(../img/background.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+.banner .mask {
+    height: 515px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* profile card */
+body > main {
+    margin-top: -350px;
+}
+main > .userCard-wrapper {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #35363B;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+.userCard .hello {
+    background: #E6686D;
+    font-weight: bold;
+    color: #27292E;
+    display: inline-block;
+    padding: 4px 16px;
+    line-height: 22px;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+.userCard .hello .triangle {
+    display: block;
+    border: 10px solid transparent;
+    width: 0px;
+    border-left-color: #E6686D;
+    border-top-width: 0px;
+    position: absolute;
+    left: 4px;
+    top: 100%;   
+}
+.userCard .userPhoto {
+    float: left;
+}
+.userCard .userProfile {
+    float: left;
+    margin-left: 65px;
+    width: 470px;
+}
+.userCard .userProfile h1 {
+    margin-top: 18px;
+
+}
+.userCard .userProfile h1 span {
+    font-weight: 300; 
+}
+.userCard .userProfile hr {
+    height: 0;
+    border: none;
+    border-top: 1px solid #47494C;
+    margin: 20px 0;
+}
+.userCard .vacation {
+    color: #27292E;
+    background-color: #E6686D;
+    padding: 3px 6px ;
+    border-radius: 2px;
+}
+.userCard dl dt,
+.userCard dl dd {
+    line-height: 20px;
+    float: left;
+    padding: 5px 0;
+}
+.userCard dl dt {
+    width: 40%;
+    font-size: 12px;
+    color: #D4D4D5;
+    font-weight: bold;
+}
+.userCard dl dd {
+    width: 60%;
+    font-size: 14px;
+    color: #84898E;
+}
+.userCard > .photoAndProfile {
+    padding: 50px;
+}
+
+/* card footer */
+main .userSocial {
+    background: #E6686D;
+}
+main .userSocial ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+main .userSocial li {
+    color: #35363B;
+    display: block;
+    float: left;
+    padding: 0 16px;
+}
+main .userSocial .iconfont {
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 50%;
+}
+main .userSocial .iconfont:hover {
+    background: #CF5D62;
+    transition: 0.3s;
+}
+
+/* download button */
+main .downloadResume-wrapper {
+    text-align: center;
+}
+main .downloadResume-wrapper a {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 21px 55px;
+    border: 1px solid #474D55;
+    background: #27292E;
+    display: inline-block;
+    border-radius: 2px;
+    color: #9D9EA2;
+    font-weight: bold;
+    margin: 32px 0;
+    transition: box-shadow 0.2s;
+}
+main .downloadResume-wrapper a:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* introduction style */
+main .intro {
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* skills style */
+section.skills .content {
+    background: #35363B;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    padding: 30px 0;
+}
+section.skills .content .row {
+    width: 940px;
+    padding: 0 50px;
+    margin-bottom: 40px;
+}
+
+
+
+/* section.skill .content .row:last-child {
+    margin-bottom: 0;
+} */
+
+
+
+section.skills .content .skill-wrapper {
+    width: 48%;
+    float: left;
+}
+section.skills .content .skill-wrapper:nth-child(even) {
+    margin-left: 30px;
+}
+section.skills .content .progressData {
+    padding-bottom: 5px;
+} 
+section.skills .content .progressData span {
+    font-size: 14px;
+    line-height: 1.1;
+    color: #999999;
+}
+section.skills .progressBar {
+    height: 5px;
+    background-color: #584045;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+@keyframes slidein {
+    from { width: 0; }
+    to   { width: 1; }
+  }
+section.skills .progress {
+    background-color: #E6686D;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    animation: 3s slidein;
+}
