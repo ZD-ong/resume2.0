@@ -73,7 +73,7 @@
     <div id="siteWelcome" class="site-welcome active">
         <div class="loading"></div>
     </div>
-    <header>
+    <header id="topNavBar">
         <div class="header-inner">
             <div class="logo">
                 <a href="#">
@@ -484,8 +484,16 @@
     <script>
         setTimeout(function(){
             siteWelcome.classList.remove('active')
-        },5000)
+        },3000)
         
+        window.onscroll = function(xxx){
+            if(scrollY > 0){
+                topNavBar.classList.add('sticky')
+            }else{
+                topNavBar.classList.remove('sticky')
+            }
+            console.log(scrollY)
+        }
     </script>
 </body>
 

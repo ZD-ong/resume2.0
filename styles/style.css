@@ -48,10 +48,20 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    transition: all 1s;
+    color: #C0C2C5;
+}
+.sticky {
+    background: #fff;
+    padding: 10px 0 10px 0;
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: #3d4451;
 }
 .header-inner {
     padding: 0 16px 0 16px;
 }
+
 .header-inner >.logo > a {
     font-family: 'Fredoka One', cursive;
     color: #9A9DA2;
@@ -75,10 +85,8 @@ header {
 }
 .header-inner > nav > ul > li > a {
     font-size: 14px;
-    color: #C0C2C5;
+    color: inherit;
     font-family: 'Open Sans', sans-serif;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
     padding-top: 10px;
     padding-bottom: 3px;
     display: block;
@@ -97,11 +105,13 @@ header .more i {
     font-size: 27px;
     border: 1px solid #888888;
     padding: 3px;
+    color: #888888;
 }
 header .more i:hover{
     border: 1px solid #FFFFFF;
     cursor: pointer;
     transition: 0.3s;
+    color: #FFFFFF;
 }
 
 /* banner style */
