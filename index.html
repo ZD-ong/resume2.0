@@ -8,10 +8,71 @@
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Open+Sans:300" rel="stylesheet">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_523841_i2mx2qdxexqd7vi.css">
     <link rel="stylesheet" href="./styles/style.css">
+    
     <title>Resume</title>
+    <style>
+        .loading {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .loading::before,
+        .loading::after {
+            content: '';
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            background: #333;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            animation: s 2s linear infinite;
+        }
+
+        .loading::after {
+            animation-delay: 1s;
+        }
+
+        @keyframes s {
+            0% {
+                width: 0px;
+                height: 0px;
+                opacity: 1;
+            }
+            100% {
+                width: 100px;
+                height: 100px;
+                opacity: 0;
+            }
+        }
+
+        .site-welcome {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 1;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .site-welcome.active {
+            display: flex;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="siteWelcome" class="site-welcome active">
+        <div class="loading"></div>
+    </div>
     <header>
         <div class="header-inner">
             <div class="logo">
@@ -420,6 +481,9 @@
             </li>
         </ul>
     </footer>
+    <script>
+        siteWelcome.classList.remove('active')
+    </script>
 </body>
 
 </html>
