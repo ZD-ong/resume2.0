@@ -85,7 +85,7 @@ header {
 }
 .header-inner > nav > ul > li > a {
     font-size: 14px;
-    color: inherit;
+    /* color: inherit; */
     font-family: 'Open Sans', sans-serif;
     padding-top: 10px;
     padding-bottom: 3px;
