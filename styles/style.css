@@ -85,15 +85,31 @@ header {
 }
 .header-inner > nav > ul > li > a {
     font-size: 14px;
-    /* color: inherit; */
+    color: inherit;
     font-family: 'Open Sans', sans-serif;
     padding-top: 10px;
     padding-bottom: 3px;
     display: block;
+    position: relative;
 }
-header > .header-inner > nav > ul > li > a:hover {
-    border-bottom: 3px solid #DE6669;
-    transition: 0.3s;
+header > .header-inner > nav > ul > li > a:hover::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #DE6669;
+    height: 3px;
+    animation: menuSlide 0.3s;
+}
+@keyframes menuSlide {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
 }
 header .more {
     float: right;
