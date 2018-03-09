@@ -85,28 +85,28 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="#">ABOUT</a>
+                        <a href="#siteAbout">ABOUT</a>
                     </li>
                     <li>
-                        <a href="#">SKILLS</a>
+                        <a href="#siteSkills">SKILLS</a>
                     </li>
                     <li>
-                        <a href="#">PORTFOLIO</a>
+                        <a href="#sitePortfolio">PORTFOLIO</a>
                     </li>
                     <li>
-                        <a href="#">EXPERENCE</a>
+                        <a href="#siteExperience">EXPERIENCE</a>
                     </li>
                     <li>
-                        <a href="#">BLOG</a>
+                        <a href="#siteBlog">BLOG</a>
                     </li>
                     <li>
-                        <a href="#">CALENDER</a>
+                        <a href="#siteCalendar">CALENDAR</a>
                     </li>
                     <li>
-                        <a href="#">CONTACT</a>
+                        <a href="#siteContact">CONTACT</a>
                     </li>
                     <li>
-                        <a href="#">OTHER</a>
+                        <a href="#siteOther">OTHER</a>
                     </li>
                 </ul>
             </nav>
@@ -196,12 +196,12 @@
         <p class="downloadResume-wrapper">
             <a href="./resume.pdf" target="_blank" download>DOWNLOAD RESUME</a>
         </p>
-        <p class="intro">
+        <p id="siteAbout" class="intro">
             Dong Zuo, Microsoft Skype_intl Team, Localization Test, EmoticonsCloud(Owner), Pactera.
             <br>Skills: JavaScript, Node.js, React.
         </p>
     </main>
-    <section class="skills">
+    <section id="siteSkills" class="skills">
         <h2>Skills</h2>
         <div class="content">
             <div class="row clearfix">
@@ -272,7 +272,7 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section id="sitePortfolio" class="portfolio">
         <h2>Portfolio</h2>
         <div class="content">
             <nav>
@@ -304,7 +304,7 @@
             </div>
         </div>
     </section>
-    <section class="experience">
+    <section id="siteExperience" class="experience">
         <h2>Experience</h2>
         <div class="content">
             <div class="timelineBar"></div>
@@ -356,7 +356,7 @@
             </div>
         </div>
     </section>
-    <section class="blog">
+    <section id="siteBlog" class="blog">
         <h2>Blog</h2>
         <div class="content">
             <div class="blog-wrapper">
@@ -407,11 +407,11 @@
             </ul>
         </div>
     </section>
-    <section>
+    <section id="siteCalendar">
         <h2>Calendar</h2>
         <div class="content"></div>
     </section>
-    <section>
+    <section id="siteContact">
         <h2>Contact Me</h2>
         <div class="content">
             <div class="left">
@@ -462,7 +462,7 @@
             </div>
         </div>
     </section>
-    <footer>
+    <footer id="siteOther">
         <ul class="social">
             <li>
                 <a href="#"></a>
@@ -484,7 +484,7 @@
     <script>
         setTimeout(function(){
             siteWelcome.classList.remove('active')
-        },3000)
+        },1000)
         
         window.onscroll = function(xxx){
             if(scrollY > 0){
@@ -493,6 +493,19 @@
                 topNavBar.classList.remove('sticky')
             }
             console.log(scrollY)
+        }
+
+        let aTags = document.querySelectorAll('header nav a')
+        for(let i = 0; i < aTags.length; i++){
+            aTags[i].onclick = function(e){
+                e.preventDefault()//阻止默认跳转
+                let a = e.currentTarget
+                let href = a.getAttribute('href')
+                let element = document.querySelector(href)
+                let top = element.offsetTop
+                window.scrollTo(0,top-100)
+                console.log(a.getAttribute('href'))
+            }
         }
     </script>
 </body>
