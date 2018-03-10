@@ -23,15 +23,21 @@ ol {
     list-style: none;
 }
 
-[data-x].active{
-  outline: 10px solid red;
-}
+
 [data-x].offset{
   transform: translateY(100px);
 }
 [data-x]{
   transform: translateY(0);
   transition: all 0.5s;
+}
+@keyframes slideUp {
+    0%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0)
+    }
 }
 section {
     max-width: 940px;
@@ -331,16 +337,18 @@ section.skills .progressBar {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    overflow: hidden;
 }
-@keyframes slidein {
-    from { width: 0; }
-    to   { width: 1; }
-  }
+
 section.skills .progress {
     background-color: #E6686D;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    animation: 3s slidein;
+    transform: translateX(0);
+    transition: all 1s;
+}
+section.skills.offset .progress {
+    transform: translateX(-100%);
 }
