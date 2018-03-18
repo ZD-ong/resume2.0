@@ -43,7 +43,7 @@ section {
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
+    margin-top: 100px;
 }
 section .content {
     max-width: 940px;
@@ -351,4 +351,33 @@ section.skills .progress {
 }
 section.skills.offset .progress {
     transform: translateX(-100%);
+}
+
+.portfolio .content .window {
+    width: 940px;
+    height: 528.75px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.portfolio .content .images {
+    position: relative;
+    width: 100%;
+}
+.portfolio .images > img {
+    width: 100%;
+    transition: all 0.5s;
+    position: absolute;
+    top: 0;
+}
+.portfolio .images > img.current {
+    left: 0;
+    transform: translateX(0);
+    z-index: 1;
+}
+.portfolio .images > img.leave {
+    transform: translateX(-100%);
+    z-index: 1;
+}
+.portfolio .images > img.enter {
+    transform: translateX(100%);
 }
