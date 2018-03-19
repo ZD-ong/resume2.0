@@ -73,26 +73,37 @@ console.log(TWEEN)
 
 let n
 初始化()
-setInterval(() => {
-    makeLeave(getImage(n))
-        .one('transitionend', (e) => {
-            makeEnter($(e.currentTarget))
-        })
-    makeCurrent(getImage(n + 1))
-    n += 1
-}, 3000)
+
+
+function setTimer(){
+    return setInterval(() => {
+        makeLeave(getImage(n))
+            .one('transitionend', (e) => {
+                makeEnter($(e.currentTarget))
+            })
+        makeCurrent(getImage(n + 1))
+        n += 1
+    }, 3000)
+}
+var timer = setTimer()
+$('#window').on('mouseenter', function () {
+    window.clearInterval(timer)
+})
+$('#window').on('mouseleave', function () {
+    timer = setTimer()
+})
 
 function getImage(n) {
     return $(`#images > img:nth-child(${x(n)})`)
 }
-
+var length = $('#images > img').length
 function x(n) {
-    if (n > 4) {
-        n = n % 4
+    if (n > length) {
+        n = n % length
         if (n === 0) {
-            n = 4
+            n = length
         }
-    } // n = 1 2 3 4
+    }
     return n
 }
 
