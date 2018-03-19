@@ -73,6 +73,14 @@ console.log(TWEEN)
 
 let n
 初始化()
+var timer = setTimer()
+$('#window').on('mouseenter', function () {
+    window.clearInterval(timer)
+})
+$('#window').on('mouseleave', function () {
+    timer = setTimer()
+})
+
 
 
 function setTimer(){
@@ -85,13 +93,6 @@ function setTimer(){
         n += 1
     }, 3000)
 }
-var timer = setTimer()
-$('#window').on('mouseenter', function () {
-    window.clearInterval(timer)
-})
-$('#window').on('mouseleave', function () {
-    timer = setTimer()
-})
 
 function getImage(n) {
     return $(`#images > img:nth-child(${x(n)})`)
