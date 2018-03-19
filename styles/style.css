@@ -394,3 +394,7 @@ section.skills.offset .progress {
     color: #FFFFFF;
     text-align: center;
 }
+
+.red {
+    color: red;
+}

@@ -123,3 +123,19 @@ function makeLeave($node) {
 function makeEnter($node) {
     return $node.removeClass('leave current').addClass('enter')
 }
+
+var allButtons = $('#buttons > span')
+for(let i = 0; i  < allButtons.length; i++){
+    $(allButtons[i]).on('click',function(e){
+        var index = $(e.currentTarget).index()
+        whichPic = index
+        activeButton(allButtons.eq(whichPic))
+    })
+    
+}
+var whichPic = 0
+function activeButton($button){
+    $button
+        .addClass('red')
+        .siblings('.red').removeClass('red')
+}
