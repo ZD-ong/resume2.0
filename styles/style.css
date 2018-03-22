@@ -353,7 +353,7 @@ section.skills.offset .progress {
     transform: translateX(-100%);
 }
 
-.portfolio .content .window {
+/* .portfolio .content .window {
     width: 940px;
     height: 528.75px;
     margin: 20px auto;
@@ -397,4 +397,72 @@ section.skills.offset .progress {
 
 .red {
     color: red;
+} */
+.portfolio .content .window {
+    width: 940px;
+    height: 528.75px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+.portfolio .window ul,
+.portfolio .window li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.window .img-ct {
+    position: absolute;
+}
+.window .img-ct::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.window .img-ct>li {
+    float: left;
+}
+.window .img-ct img {
+    width: 940px;
+    height: 528.75px;
+}
+.window .arrow {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    color: #ccc;
+    text-align: center;
+    text-decoration: none;
+}
+.window .arrow:hover {
+    color: #fff;
+}
+.window .arrow .iconfont {
+    font-size: 50px;
+}
+.window .pre {
+  left: 15px;
+}
+.window .next {
+  right: 15px;
+}
+.window .button {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  font-size: 0;
+  z-index: 1;
+  text-align: center;
+}
+.window .button > li {
+  display: inline-block;
+  width: 30px;
+  height: 5px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.window .button > li.active {
+  background-color: #fff;
 }
