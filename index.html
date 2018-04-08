@@ -119,6 +119,20 @@
         <div class="mask"></div>
     </div>
     <main>
+        <style>
+            .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+        </style>
+        
         <div data-x id="siteAbout" class="userCard-wrapper">
             <div class="userCard">
                 <div class="photoAndProfile clearfix">
@@ -325,8 +339,12 @@
                         </a>
                     </li>
                 </ul>
-                <span class="pre arrow" href=""><i class="iconfont icon-left"></i></span>
-                <span class="next arrow" href=""><i class="iconfont icon-right"></i></span>
+                <span class="pre arrow" href="">
+                    <i class="iconfont icon-left"></i>
+                </span>
+                <span class="next arrow" href="">
+                    <i class="iconfont icon-right"></i>
+                </span>
                 <ul class="button">
                     <li class="active"></li>
                     <li></li>
@@ -393,15 +411,24 @@
         <h2>Blog</h2>
         <div class="content">
             <div class="blog-wrapper">
-                <div class="bolg-inner">
-                    <img src="" alt="hexo logo">
-                    <h2>The life with yuanbao</h2>
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/1)"></div>
+                        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/2)"></div>
+                        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/3)"></div>
+                        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/4)"></div>
+                        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/5)"></div>
+                        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/6)"></div>
+                        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/7)"></div>
+                        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/8)"></div>
+                        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/9)"></div>
+                        <div class="swiper-slide" style="background-image:url(http://lorempixel.com/600/600/nature/10)"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="blogHideLogo">
-                    <a href="#"></a>
-                    <a href="#"></a>
-                    <a href="#"></a>
-                </div>
+
             </div>
         </div>
     </section>
@@ -517,6 +544,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
     <script src="./scripts/script.js"></script>
+    <script>
+        console.log(window.Swiper)
+        var swiper = new Swiper('.swiper-container', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
+    </script>
 </body>
 
 </html>
