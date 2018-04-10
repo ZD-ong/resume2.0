@@ -215,7 +215,7 @@ main > .userCard-wrapper {
 .userCard .vacation {
     color: #27292E;
     background-color: #E6686D;
-    padding: 3px 6px ;
+    padding: 1px 2px ;
     border-radius: 2px;
 }
 .userCard dl dt,
@@ -296,7 +296,7 @@ main .intro {
 }
 
 /* skills style */
-section.skills .content {
+section.skills .content{
     background: #35363B;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
     padding: 30px 0;
@@ -466,3 +466,65 @@ section.skills.offset .progress {
 .window .button > li.active {
   background-color: #fff;
 }
+
+
+/* LeaveMessage */
+section.message .content{
+    background: #35363B;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    padding: 0 0 30px 0;
+}
+section.message p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 2.5;
+    background-color: #E6686D;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+section.message li {
+    padding: 16px;
+    margin: 0 50px;
+    border-bottom: 1px solid #47494C;
+}
+section.message form {
+    margin: 30px 50px 0;
+}
+section.message form input {
+    padding-left: 6px;
+    margin-right: 20px;
+    color: #333;
+    outline:none;
+    background: #eee;
+    border: #eee;;
+    width: 30%;
+    height: 32px;
+    border-radius: 2px;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+#postMessageForm > button{
+    padding: 6px 12px;
+    border: transparent;
+    height: 32px;
+    color: #fff;
+    background-color: #E6686D;
+    border-radius: 2px;
+    transition: box-shadow 0.2s;
+    outline:none;
+}
+#postMessageForm > button:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+input::-webkit-input-placeholder {  /* WebKit browsers */
+    font-size: 14px;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 14px;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 14px;
+}
+input :-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 14px;
+}
+
