@@ -225,13 +225,13 @@ main > .userCard-wrapper {
     padding: 5px 0;
 }
 .userCard dl dt {
-    width: 40%;
+    width: 20%;
     font-size: 12px;
     color: #D4D4D5;
     font-weight: bold;
 }
 .userCard dl dd {
-    width: 60%;
+    width: 80%;
     font-size: 14px;
     color: #84898E;
 }
